@@ -11,4 +11,4 @@ const Bot = new TelegramBot(Token, {polling: true});
 
 const command = require('./command.js');
 
-command.start(Bot, log);
+command.init(Bot, log);
