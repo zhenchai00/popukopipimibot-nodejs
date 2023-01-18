@@ -1,0 +1,17 @@
+{
+  "name": "popukopipimibot-nodejs",
+  "version": "1.0.0",
+  "description": "Learning Telegram Bot with NodeJS and it's API ",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-telegram-bot-api": "^0.61.0",
+    "npmlog": "^7.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Cai Zhen",
+  "license": "ISC"
+}
