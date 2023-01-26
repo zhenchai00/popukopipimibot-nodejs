@@ -29,6 +29,58 @@ const MET_CAT_ID_THUNDERSTORM   = 'THUNDERSTORM';
 const MET_CAT_ID_THUNDERSTORM2  = 'THUNDERSTORM2';
 const MET_CAT_ID_HOURLY         = 'HOURLY';
 
+const MET_TYPE_FORECAST_GENERAL_DAILY_MORNING                       = 'FGM';
+const MET_TYPE_FORECAST_GENERAL_DAILY_AFTERNOON                     = 'FGA';
+const MET_TYPE_FORECAST_GENERAL_DAILY_NIGHT                         = 'FGN';
+const MET_TYPE_FORECAST_GENERAL_DAILY_MAXIMUM_TEMPERATURE           = 'FMAXT';
+const MET_TYPE_FORECAST_GENERAL_DAILY_MINIMUM_TEMPERATURE           = 'FMINT';
+const MET_TYPE_FORECAST_GENERAL_DAILY_SIGNIFICANT_WEATHER           = 'FSIGW';
+const MET_TYPE_WARNING_STRONG_WIND_ROUGH_SEA                        = 'WINDSEA';
+const MET_TYPE_WARNING_HEAVY_RAIN                                   = 'RAIN';
+const MET_TYPE_WARNING_TROPICAL_CYCLONE                             = 'CYCLONE';
+const MET_TYPE_ALERT_EARTHQUAKE_TSUNAMI                             = 'QUAKETSUNAMI';
+const MET_TYPE_OBSERVATION_RADAR_MALAYSIA                           = 'RADARMY';
+const MET_TYPE_OBSERVATIONS_RADAR_PENINSULA_MALAYSIA                = 'RADARPENINSULAMY';
+const MET_TYPE_OBSERVATIONS_RADAR_SABAH_SARAWAK                     = 'RADARSABAHSARAWAK';
+const MET_TYPE_OBSERVATIONS_SATELLITE_HIMAWARI_8_ASIAN_INFRA_RED_BAND = 'SATHIMAWARI';
+const MET_TYPE_OBSERVATIONS_SATELLITE_FENG_YUN_2G_INFRA_RED_BAND    = 'SATFY2G';
+const MET_TYPE_OBSERVATIONS_SATELLITE_NOAA_PENINSULA_SUMATERA       = 'SATNOAA';
+const MET_TYPE_OBSERVATIONS_SATELLITE_TERRA_AQUA_HOTSPOT_PENINSULA  = 'SATTERRAAQUA';
+const MET_TYPE_FORECAST_MARINE_DAILY_MORNING                        = 'FMM';
+const MET_TYPE_FORECAST_MARINE_DAILY_AFTERNOON                      = 'FMA';
+const MET_TYPE_FORECAST_MARINE_DAILY_NIGHT                          = 'FMN';
+const MET_TYPE_FORECAST_MARINE_DAILY_SIGNIFICANT_WEATHER            = 'FMSIGW';
+const MET_TYPE_FORECAST_MARINE_WIND_DIRECTION                       = 'FMWD';
+const MET_TYPE_FORECAST_MARINE_WIND_SPEED                           = 'FMWS';
+const MET_TYPE_FORECAST_MARINE_WAVE_HEIGHT                          = 'FMWH';
+const MET_TYPE_WARNING_STRONG_WIND_ROUGH_SEA_2                      = 'WINDSEA2';
+const MET_TYPE_WARNING_TROPICAL_CYCLONE_2                           = 'CYCLONE2';
+const MET_TYPE_ALERT_EARTHQUAKE_TSUNAMI_2                           = 'QUAKETSUNAMI2';
+const MET_TYPE_WARNING_THUNDERSTORM_2                               = 'THUNDERSTORM2';
+const MET_TYPE_HOURLY_OBSERVATION_RAIN_1HR                          = 'RAIN_1HR';
+const MET_TYPE_HOURLY_OBSERVATION_TEMPERATURE                       = 'TEMP';
+const MET_TYPE_HOURLY_OBSERVATION_RELATIVE_HUMIDITY                 = 'RH';
+const MET_TYPE_HOURLY_OBSERVATION_WIND_DIRECTION                    = 'WND_DIR';
+const MET_TYPE_HOURLY_OBSERVATION_WIND_SPEED                        = 'WND_SPD';
+const MET_TYPE_HOURLY_OBSERVATION_VISIBILITY                        = 'VIS';
+const MET_TYPE_HOURLY_OBSERVATION_PRESENT_WEATHER_ID                = 'PRST_WX_ID';
+const MET_TYPE_OBSERVATION_RAINS_MAX_TEMPERATURE                    = 'RMAXT';
+const MET_TYPE_WARNING_THUNDERSTORM                                 = 'THUNDERSTORM';
+const MET_TYPE_WARNING_HEAVY_RAIN_2                                 = 'RAIN2';
+const MET_TYPE_OBSERVATION_RAINS                                    = 'RAINS';
+const MET_TYPE_OBSERVATION_RAINS_10M                                = 'RAINS10m';
+const MET_TYPE_OBSERVATION_RAINS_20M                                = 'RAINS20m';
+const MET_TYPE_OBSERVATION_RAINS_30M                                = 'RAINS30m';
+const MET_TYPE_OBSERVATION_RAINS_40M                                = 'RAINS40m';
+const MET_TYPE_OBSERVATION_RAINS_50M                                = 'RAINS50m';
+const MET_TYPE_OBSERVATION_RAINS_60M                                = 'RAINS60m';
+const MET_TYPE_OBSERVATION_RAINS_70M                                = 'RAINS70m';
+const MET_TYPE_OBSERVATION_RAINS_80M                                = 'RAINS80m';
+const MET_TYPE_OBSERVATION_RAINS_90M                                = 'RAINS90m';
+const MET_TYPE_OBSERVATION_RAINS_100M                               = 'RAINS100m';
+const MET_TYPE_OBSERVATION_RAINS_110M                               = 'RAINS110m';
+const MET_TYPE_OBSERVATION_RAINS_120M                               = 'RAINS120m';
+
 exports.weather = async (msgText) => {
     try {
         log.warn('[weather] ' + __filename, 'msgText - ' + msgText);
@@ -36,9 +88,6 @@ exports.weather = async (msgText) => {
         let cmd = msgText.split(' ');
         let date = common.getDate();
         let data = {};
-        let locationName = cmd[2].toUpperCase();
-        // let locationId = getLocationDetails()
-        log.warn('[weather] ' + __filename, 'cmd - ' + JSON.stringify(cmd));
 
         /**
          * Got the callback value from MET, now need to fix the location name by another split method
@@ -47,6 +96,9 @@ exports.weather = async (msgText) => {
 
         switch (cmd[1]) {
             case 'weather':
+                let locationName = cmd[2] + ' ' + cmd[3];
+                locationName = locationName.toUpperCase();
+                log.warn('[weather] ' + __filename, 'location name ' + JSON.stringify(locationName));
                 data = {
                     'datasetid': MET_SET_ID_WEATHER,
                     'datacategoryid': MET_CAT_ID_GENERAL,
@@ -62,6 +114,21 @@ exports.weather = async (msgText) => {
         }
         let response = await api.getWeather(url, data);
         log.warn('[weather] ' + __filename, 'response ' + JSON.stringify(response));
+
+        let metaData = response.metadata.resultset;
+        let results = response.results;
+
+        if (metaData.datasetid == MET_SET_ID_WEATHER && metaData.datacategoryid == MET_CAT_ID_GENERAL) {
+            let msg = 'Weather - Forecase -  General\n\n';
+            // msg += 'Location: ' + common.getCapitalizeFirstLetter(metaData.locationname);
+            log.warn('[weather]' + __filename, 'return location name - ' + common.getCapitalizeFirstLetter(metaData.locationname));
+            for (let i = 0; i < metaData.count; i++) {
+                log.warn('[weather]' + __filename, 'result loop here '+i+' - ' + JSON.stringify(results[i]));
+            }
+            log.warn('[weather]' + __filename, 'return message - ' + msg);
+            // return msg;
+        }
+
 
         return response;
     } catch (error) {
