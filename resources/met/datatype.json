@@ -1,0 +1,317 @@
+{
+    "metadata": {
+        "resultset": {
+            "count": 58,
+            "offset": 0,
+            "limit": 50
+        }
+    },
+    "results": [
+        {
+            "id": "FGM",
+            "name": "FORECAST - GENERAL - DAILY MORNING",
+            "datasetid": "FORECAST",
+            "datacategoryid": "GENERAL"
+        },
+        {
+            "id": "FGA",
+            "name": "FORECAST - GENERAL - DAILY AFTERNOON",
+            "datasetid": "FORECAST",
+            "datacategoryid": "GENERAL"
+        },
+        {
+            "id": "FGN",
+            "name": "FORECAST - GENERAL - DAILY NIGHT",
+            "datasetid": "FORECAST",
+            "datacategoryid": "GENERAL"
+        },
+        {
+            "id": "FMAXT",
+            "name": "FORECAST - GENERAL - DAILY MAXIMUM TEMPERATURE",
+            "datasetid": "FORECAST",
+            "datacategoryid": "GENERAL"
+        },
+        {
+            "id": "FMINT",
+            "name": "FORECAST - GENERAL - DAILY MINIMUM TEMPERATURE",
+            "datasetid": "FORECAST",
+            "datacategoryid": "GENERAL"
+        },
+        {
+            "id": "FSIGW",
+            "name": "FORECAST - GENERAL - DAILY SIGNIFICANT WEATHER",
+            "datasetid": "FORECAST",
+            "datacategoryid": "GENERAL"
+        },
+        {
+            "id": "WINDSEA",
+            "name": "WARNING - STRONG WIND & ROUGH SEA",
+            "datasetid": "WARNING",
+            "datacategoryid": "WINDSEA"
+        },
+        {
+            "id": "RAIN",
+            "name": "WARNING - HEAVY RAIN",
+            "datasetid": "WARNING",
+            "datacategoryid": "RAIN"
+        },
+        {
+            "id": "CYCLONE",
+            "name": "WARNING - TROPICAL CYCLONE",
+            "datasetid": "WARNING",
+            "datacategoryid": "CYCLONE"
+        },
+        {
+            "id": "QUAKETSUNAMI",
+            "name": "ALERT - EARTHQUAKE/TSUNAMI",
+            "datasetid": "WARNING",
+            "datacategoryid": "QUAKETSUNAMI"
+        },
+        {
+            "id": "RADARMY",
+            "name": "OBSERVATION - RADAR - MALAYSIA",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RADAR"
+        },
+        {
+            "id": "RADARPENINSULAMY",
+            "name": "OBSERVATION - RADAR - PENINSULA MALAYSIA",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RADAR"
+        },
+        {
+            "id": "RADARSABAHSARAWAK",
+            "name": "OBSERVATION - RADAR - SABAH & SARAWAK",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RADAR"
+        },
+        {
+            "id": "SATHIMAWARI",
+            "name": "OBSERVATION - SATELLITE - HIMAWARI-8 ASEAN INFRA RED BAND",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RADAR"
+        },
+        {
+            "id": "SATFY2G",
+            "name": "OBSERVATION - SATELLITE - FENG YUN 2G ASEAN INFRA RED BAND",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "SATELLITE"
+        },
+        {
+            "id": "SATNOAA",
+            "name": "OBSERVATION - SATELLITE - NOAA PENINSULA & SUMATERA",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "SATELLITE"
+        },
+        {
+            "id": "SATTERRAAQUA",
+            "name": "OBSERVATION - SATELLITE - TERRA/AQUA HOTSPOT PENINSULA",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "SATELLITE"
+        },
+        {
+            "id": "FMM",
+            "name": "FORECAST - MARINE - DAILY MORNING",
+            "datasetid": "FORECAST",
+            "datacategoryid": "MARINE"
+        },
+        {
+            "id": "FMA",
+            "name": "FORECAST - MARINE - DAILY AFTERNOON",
+            "datasetid": "FORECAST",
+            "datacategoryid": "MARINE"
+        },
+        {
+            "id": "FMN",
+            "name": "FORECAST - MARINE - DAILY NIGHT",
+            "datasetid": "FORECAST",
+            "datacategoryid": "MARINE"
+        },
+        {
+            "id": "FMSIGW",
+            "name": "FORECAST - MARINE - DAILY SIGNIFICANT WEATHER",
+            "datasetid": "FORECAST",
+            "datacategoryid": "MARINE"
+        },
+        {
+            "id": "FMWD",
+            "name": "FORECAST - MARINE - WIND DIRECTION",
+            "datasetid": "FORECAST",
+            "datacategoryid": "MARINE"
+        },
+        {
+            "id": "FMWS",
+            "name": "FORECAST - MARINE - WIND SPEED",
+            "datasetid": "FORECAST",
+            "datacategoryid": "MARINE"
+        },
+        {
+            "id": "FMWH",
+            "name": "FORECAST - MARINE - WAVE HEIGHT",
+            "datasetid": "FORECAST",
+            "datacategoryid": "MARINE"
+        },
+        {
+            "id": "WINDSEA2",
+            "name": "WARNING - STRONG WIND & ROUGH SEA",
+            "datasetid": "WARNING",
+            "datacategoryid": "WINDSEA2"
+        },
+        {
+            "id": "CYCLONE2",
+            "name": "WARNING - TROPICAL CYCLONE",
+            "datasetid": "WARNING",
+            "datacategoryid": "CYCLONE2"
+        },
+        {
+            "id": "QUAKETSUNAMI2",
+            "name": "ALERT - EARTHQUAKE/TSUNAMI",
+            "datasetid": "WARNING",
+            "datacategoryid": "QUAKETSUNAMI2"
+        },
+        {
+            "id": "THUNDERSTORM2",
+            "name": "WARNING - THUNDERSTORM",
+            "datasetid": "WARNING",
+            "datacategoryid": "THUNDERSTORM2"
+        },
+        {
+            "id": "RAIN_1HR",
+            "name": "OBSERVATION - HOURLY OBSERVATION - RAIN_1HR",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "HOURLY"
+        },
+        {
+            "id": "TEMP",
+            "name": "OBSERVATION - HOURLY OBSERVATION - TEMPERATURE",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "HOURLY"
+        },
+        {
+            "id": "RH",
+            "name": "OBSERVATION - HOURLY OBSERVATION - RELATIVE HUMIDITY",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "HOURLY"
+        },
+        {
+            "id": "WND_DIR",
+            "name": "OBSERVATION - HOURLY OBSERVATION - WIND DIRECTION",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "HOURLY"
+        },
+        {
+            "id": "WND_SPD",
+            "name": "OBSERVATION - HOURLY OBSERVATION - WIND SPEED",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "HOURLY"
+        },
+        {
+            "id": "VIS",
+            "name": "OBSERVATION - HOURLY OBSERVATION - VISIBILITY",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "HOURLY"
+        },
+        {
+            "id": "PRST_WX_ID",
+            "name": "OBSERVATION - HOURLY OBSERVATION - PRESENT WEATHER ID",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "HOURLY"
+        },
+        {
+            "id": "RMAXT",
+            "name": "OBSERVATION - RAINS - MAX TEMPERATURE",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "THUNDERSTORM",
+            "name": "WARNING - THUNDERSTORM",
+            "datasetid": "WARNING",
+            "datacategoryid": "THUNDERSTORM"
+        },
+        {
+            "id": "RAIN2",
+            "name": "WARNING - HEAVY RAIN",
+            "datasetid": "WARNING",
+            "datacategoryid": "RAIN2"
+        },
+        {
+            "id": "RAINS",
+            "name": "OBSERVATION - RAINS - RAINS",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS10m",
+            "name": "OBSERVATION - RAINS - RAINS + 10m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS20m",
+            "name": "OBSERVATION - RAINS - RAINS + 20m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS30m",
+            "name": "OBSERVATION - RAINS - RAINS + 30m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS40m",
+            "name": "OBSERVATION - RAINS - RAINS + 40m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS50m",
+            "name": "OBSERVATION - RAINS - RAINS + 50m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS60m",
+            "name": "OBSERVATION - RAINS - RAINS + 60m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS70m",
+            "name": "OBSERVATION - RAINS - RAINS + 70m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS80m",
+            "name": "OBSERVATION - RAINS - RAINS + 80m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS90m",
+            "name": "OBSERVATION - RAINS - RAINS + 90m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS100m",
+            "name": "OBSERVATION - RAINS - RAINS + 100m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS110m",
+            "name": "OBSERVATION - RAINS - RAINS + 110m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        },
+        {
+            "id": "RAINS120m",
+            "name": "OBSERVATION - RAINS - RAINS + 120m",
+            "datasetid": "OBSERVATION",
+            "datacategoryid": "RAINS"
+        }
+    ]
+}

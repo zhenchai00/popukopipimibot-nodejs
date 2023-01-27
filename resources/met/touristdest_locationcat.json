@@ -1,0 +1,260 @@
+{
+    "metadata": {
+        "resultset": {
+            "count": 31,
+            "offset": 0,
+            "limit": 50,
+            "locationcategoryid": "TOURISTDEST"
+        }
+    },
+    "results": [
+        {
+            "id": "LOCATION:316",
+            "name": "DESARU",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:1",
+            "latitude": 1.5402,
+            "longitude": 104.268
+        },
+        {
+            "id": "LOCATION:327",
+            "name": "PULAU SIBU",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:1",
+            "latitude": 2.2205,
+            "longitude": 104.0668
+        },
+        {
+            "id": "LOCATION:323",
+            "name": "PULAU LANGKAWI",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:2",
+            "latitude": 6.36667,
+            "longitude": 99.8
+        },
+        {
+            "id": "LOCATION:332",
+            "name": "TAMAN NEGARA KELANTAN",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:3",
+            "latitude": 4.7,
+            "longitude": 102.466667
+        },
+        {
+            "id": "LOCATION:315",
+            "name": "CHERATING",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": 4.12557,
+            "longitude": 103.39388
+        },
+        {
+            "id": "LOCATION:317",
+            "name": "GENTING HIGHLANDS",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": 3.39545,
+            "longitude": 101.77915
+        },
+        {
+            "id": "LOCATION:763",
+            "name": "TASIKH BERA",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": null,
+            "longitude": null
+        },
+        {
+            "id": "LOCATION:312",
+            "name": "BUKIT TINGGI",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": 2.2872,
+            "longitude": 103.6726
+        },
+        {
+            "id": "LOCATION:313",
+            "name": "BUKIT FRASER",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": 3.7126,
+            "longitude": 101.7412
+        },
+        {
+            "id": "LOCATION:314",
+            "name": "CAMERON HIGHLANDS",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": 4.48333,
+            "longitude": 101.45
+        },
+        {
+            "id": "LOCATION:329",
+            "name": "PULAU TIOMAN",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": 2.7972,
+            "longitude": 104.166
+        },
+        {
+            "id": "LOCATION:330",
+            "name": "PUSAT KONSERVASI GAJAH KEBANGSAAN",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": 3.529165,
+            "longitude": 102.158058
+        },
+        {
+            "id": "LOCATION:331",
+            "name": "TAMAN NEGARA",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": 4.6106103,
+            "longitude": 102.4167082
+        },
+        {
+            "id": "LOCATION:544",
+            "name": "TASIK BERA",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": 3.8166668,
+            "longitude": 102.3991574
+        },
+        {
+            "id": "LOCATION:762",
+            "name": "FRASER'S HILL",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:8",
+            "latitude": null,
+            "longitude": null
+        },
+        {
+            "id": "LOCATION:334",
+            "name": "TAMAN NEGARA PULAU PINANG",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:9",
+            "latitude": 5.4500243,
+            "longitude": 100.1935435
+        },
+        {
+            "id": "LOCATION:310",
+            "name": "BATU FERINGGI",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:9",
+            "latitude": 5.4709,
+            "longitude": 100.24529
+        },
+        {
+            "id": "LOCATION:758",
+            "name": "PENANG HILL",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:9",
+            "latitude": null,
+            "longitude": null
+        },
+        {
+            "id": "LOCATION:311",
+            "name": "BUKIT BENDERA",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:9",
+            "latitude": 2.3733,
+            "longitude": 102.5104
+        },
+        {
+            "id": "LOCATION:319",
+            "name": "LUMUT",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:10",
+            "latitude": 4.2323,
+            "longitude": 100.6298
+        },
+        {
+            "id": "LOCATION:324",
+            "name": "PULAU PANGKOR",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:10",
+            "latitude": 4.2311,
+            "longitude": 100.5599
+        },
+        {
+            "id": "LOCATION:321",
+            "name": "PAYA INDAH WETLANDS",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:12",
+            "latitude": 2.8603852,
+            "longitude": 101.6265801
+        },
+        {
+            "id": "LOCATION:333",
+            "name": "TAMAN NEGARA KINABALU",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:13",
+            "latitude": 6.1345,
+            "longitude": 116.6375
+        },
+        {
+            "id": "LOCATION:328",
+            "name": "PULAU SIPADAN",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:13",
+            "latitude": 4.11472,
+            "longitude": 118.63444
+        },
+        {
+            "id": "LOCATION:326",
+            "name": "PULAU REDANG",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:16",
+            "latitude": 5.77736,
+            "longitude": 103.00759
+        },
+        {
+            "id": "LOCATION:335",
+            "name": "TAMAN NEGARA TERENGGANU",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:16",
+            "latitude": 4.8757231,
+            "longitude": 102.9670403
+        },
+        {
+            "id": "LOCATION:336",
+            "name": "TANJUNG JARA",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:16",
+            "latitude": 4.8132,
+            "longitude": 103.4257
+        },
+        {
+            "id": "LOCATION:337",
+            "name": "TASIK KENYIR",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:16",
+            "latitude": 5.0,
+            "longitude": 102.8
+        },
+        {
+            "id": "LOCATION:322",
+            "name": "PULAU KAPAS",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:16",
+            "latitude": 5.2214,
+            "longitude": 103.2653
+        },
+        {
+            "id": "LOCATION:325",
+            "name": "PULAU PERHENTIAN",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:16",
+            "latitude": 5.9145,
+            "longitude": 102.7397
+        },
+        {
+            "id": "LOCATION:318",
+            "name": "KIJAL",
+            "locationcategoryid": "TOURISTDEST",
+            "locationrootid": "LOCATION:16",
+            "latitude": 4.35,
+            "longitude": 103.48333
+        }
+    ]
+}
