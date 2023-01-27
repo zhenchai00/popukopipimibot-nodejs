@@ -96,9 +96,9 @@ exports.weather = async (msgText) => {
 
         switch (cmd[1]) {
             case 'weather':
-                let locationName = cmd[2] + ' ' + cmd[3];
+                var locationName = (cmd[3] == undefined || cmd[3] == null) ? cmd[2] : cmd[2] + ' ' + cmd[3];
                 locationName = locationName.toUpperCase();
-                log.warn('[weather] ' + __filename, 'location name ' + JSON.stringify(locationName));
+
                 data = {
                     'datasetid': MET_SET_ID_WEATHER,
                     'datacategoryid': MET_CAT_ID_GENERAL,
@@ -119,21 +119,61 @@ exports.weather = async (msgText) => {
         let results = response.results;
 
         if (metaData.datasetid == MET_SET_ID_WEATHER && metaData.datacategoryid == MET_CAT_ID_GENERAL) {
-            let msg = 'Weather - Forecase -  General\n\n';
-            // msg += 'Location: ' + common.getCapitalizeFirstLetter(metaData.locationname);
-            log.warn('[weather]' + __filename, 'return location name - ' + common.getCapitalizeFirstLetter(metaData.locationname));
+            let morning     = 'Morning: ';
+            let afternoon   = 'Afternoon: ';
+            let night       = 'Night: ';
+            let temperature = 'Min Max Temperature: ';
+            let significant = 'Daily Significant Weather: ';
+            let msg         = '*Weather - Forecase - General*\n';
+            msg             += 'Location: *' + locationName + '*\n\n';
+
+            log.warn('[weather]' + __filename, 'datasetid - FORECAST  datacategoryid - GENERAL');
             for (let i = 0; i < metaData.count; i++) {
-                log.warn('[weather]' + __filename, 'result loop here '+i+' - ' + JSON.stringify(results[i]));
+                let value = results[i];
+                switch (value.datatype) {
+                    case MET_TYPE_FORECAST_GENERAL_DAILY_MORNING:
+                        morning += '*' + value.value + '*';
+                        break;
+                
+                    case MET_TYPE_FORECAST_GENERAL_DAILY_AFTERNOON:
+                        afternoon += '*' + value.value + '*';
+                        break;
+
+                    case MET_TYPE_FORECAST_GENERAL_DAILY_NIGHT:
+                        night += '*' + value.value + '*';
+                        break;
+
+                    case MET_TYPE_FORECAST_GENERAL_DAILY_MINIMUM_TEMPERATURE:
+                        temperature += '*' + value.value + '* ~ ';
+                        break;
+
+                    case MET_TYPE_FORECAST_GENERAL_DAILY_MAXIMUM_TEMPERATURE:
+                        temperature += '*' + value.value + '*';
+                        break;
+
+                    case MET_TYPE_FORECAST_GENERAL_DAILY_SIGNIFICANT_WEATHER:
+                        significant += '*' + value.value + '*';                        
+                        break;
+
+                    default:
+                        morning     = 'Undefined';
+                        afternoon   = 'Undefined';
+                        night       = 'Undefined';
+                        temperature = 'Undefined';
+                        significant = 'Undefined';
+                        break;
+                }
             }
-            log.warn('[weather]' + __filename, 'return message - ' + msg);
-            // return msg;
+
+            msg += significant + '\n\n' + morning + '\n' + afternoon + '\n' + night + '\n' + temperature;
+            log.warn('[weather]' + __filename, 'return message - \n' + msg);
+            return  msg;
+        } else {
+            return 'Undefined';
         }
-
-
-        return response;
     } catch (error) {
         log.error('[weather]' + __filename, 'error - ' + JSON.stringify(error));
-        return error;
+        return await error;
     }
 }
 

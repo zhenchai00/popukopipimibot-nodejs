@@ -22,12 +22,12 @@ exports.init = (Bot, log) => {
      * 
      * By using the command below may use '/met'. type --help will getting overall information of the command 
      */
-    Bot.onText(/\/met/, (msg) => {
+    Bot.onText(/\/met/, async (msg) => {
         log.notice('[met] ' + __filename, 'Executed - ' + msg.from.username + ' - ' + msg.text);
         let met = require('./api/met.api.js');
-        let response = met.weather(msg.text);
+        let response = await met.weather(msg.text);
 
-        return Bot.sendMessage(msg.chat.id, "MET  \n\n" + JSON.stringify(response));
+        return Bot.sendMessage(msg.chat.id, "*MET*  \n\n" + response, {parse_mode: 'Markdown'});
     });
 
     Bot.on('text', (msg) => {
