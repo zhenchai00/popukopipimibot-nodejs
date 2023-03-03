@@ -9,9 +9,13 @@
     "node-telegram-bot-api": "^0.61.0",
     "npmlog": "^7.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^29.4.3"
+  },
   "scripts": {
-    "test": "start"
+    "start": "node index.js",
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Cai Zhen",
   "license": "ISC"
